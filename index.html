@@ -1,0 +1,28 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electron Browser</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'; object-src 'none';">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; overflow: hidden; }
+        #controls { height: 30px; display: flex; align-items: center; background: #ddd; position: fixed; top: 30px; width: 100%; z-index: 1; }
+        #url { flex: 1; }
+        #tabs { height: 30px; background: #333; color: #fff; display: flex; align-items: center; position: fixed; top: 0; width: 100%; z-index: 2; }
+        .tab { flex: 1; padding: 5px 10px; cursor: pointer; }
+        .tab.active { background: #555; }
+    </style>
+</head>
+<body>
+<div id="tabs"></div>
+<div id="controls">
+    <button id="back">Back</button> <!-- 添加后退按钮 -->
+    <input type="text" id="url" placeholder="Enter URL" />
+    <button id="load-url">Load URL</button>
+    <button id="new-tab">New Tab</button>
+</div>
+<script src="renderer.js"></script>
+</body>
+</html>
+
+
